@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="fr">
+   <head>
+      <title>Les sélecteurs CSS&thinsp;&ndash;&thinsp;CHEAT SHEET - Web Knowledge Center</title>
+      <meta charset="UTF-8">
+      <meta name="description" content="Web Knowledge Center - DWT 2022">
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@700&family=Press+Start+2P&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="styles/app.css">
+      <meta property="og:title" content="Sam | Webdesigner" />
+      <meta property="og:type" content="article" />
+      <meta property="og:url" content="http://www.sam-mélissa.be/" />
+      <meta property="og:image:url" content="http://xn--sam-mlissa-f7a.be/projets/webknowledgecenter/assets/images/logo.png" />
+      <meta property="og:image:alt" content="Logo du Web Knowledge Center"/>
+      <meta property="og:image:width" content="845" />
+      <meta property="og:image:height" content="1800" />
+      <meta property="og:description" content="Web Knowledge Center - 2022, DWT." />
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:site" content="@SamMELISSA3">
+      <meta name="twitter:title" content="Sam | Webdesigner">
+      <meta name="twitter:description" content="Web Knowledge Center - 2022, DWT.">
+      <meta name="twitter:creator" content="@SamMELISSA3">
+      <meta name="twitter:image" content="http://xn--sam-mlissa-f7a.be/projets/webknowledgecenter/assets/images/logo.png">
+      <link rel="shortcut icon" href="../assets/images/hacker.png" type="image/png">
+   </head>
+   <body>
+      <header>
+         <h1><a href="index.html" class="logo">WKC</a></h1>
+         <ul class="navdesktop">
+            <li><a class="link__white" href="about.html">About</a></li>
+         </ul>
+         <input type="checkbox" id="navito" class="checkbox" />
+         <label for="navito" class="burger">
+         <span class="icon"><span class="contentlink">burger</span></span>
+         </label>
+         <div class="background"><span class="contentlink">burger</span></div>
+         <nav class="nav">
+            <ul class="list">
+               <li class="item"> <a class="link" href="about.html">About</a></li>
+               <li class="item"  > <a href="index.html"  class="link">Home</a> </li>
+            </ul>
+         </nav>
+      </header>
+      <main class="animationdesection"  id="hello">
+         <div class="contentonglet__cheatsheet">
+            <small><a  href="index.html" class="onglet__btn buttoncolors">back</a></small>
+            <h2>CHEAT SHEET&thinsp;&ndash;&thinsp;Les sélecteurs CSS : </h2>
+            <table>
+               <caption>Basiques</caption>
+               <thead>
+                  <tr>
+                     <th>Nom</th>
+                     <th>Sélecteur</th>
+                     <th></th>
+                     <th></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td data-label="Nom">Universel</td>
+                     <td data-label="Sélecteur">*</td>
+                     <td data-label="">Sélectionne tous les éléments.&nbsp;</td>
+                     <td data-label=""><span class="green">1 2 3 4</span></td>
+                  </tr>
+                  <tr>
+                     <td data-label="Nom">Type</td>
+                     <td data-label="Sélecteur">div</td>
+                     <td data-label="">Sélectionne les éléments de ce type.&nbsp;</td>
+                     <td data-label="">1 <span class="green">div</span> 3 <span class="green">div</span></td>
+                  </tr>
+                  <tr>
+                     <td data-label="Nom">Classe</td>
+                     <td data-label="Sélecteur">.3</td>
+                     <td data-label="">Sélectionne les éléments avec cette classe.&nbsp;</td>
+                     <td data-label="">.1 .2 <span class="green">.3</span> .4</td>
+                  </tr>
+                  <tr>
+                     <td data-label="Nom">ID</td>
+                     <td data-label="Sélecteur">#w</td>
+                     <td data-label="">Sélectionne les éléments avec cet id.&nbsp;</td>
+                     <td data-label="">.#c #s <span class="green">#w</span> #k</td>
+                  </tr>
+               </tbody>
+            </table>
+            <table>
+               <caption>Combination</caption>
+               <thead>
+                  <tr>
+                     <th>Nom</th>
+                     <th>Sélecteur</th>
+                     <th></th>
+                     <th></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td data-label="Nom">Descendant</td>
+                     <td data-label="Sélecteur">div 1</td>
+                     <td data-label="">Sélectionne les éléments qui sont descendants du premier élément.&nbsp;</td>
+                     <td data-label="">div <br> <span class="green">1</span> 2 <br>
+                        <span class="green">1</span> 2 <span class="green">1</span> 3
+                     </td>
+                  </tr>
+                  <tr>
+                     <td data-label="Nom">Enfant direct</td>
+                     <td data-label="Sélecteur">div > 1</td>
+                     <td data-label="">Sélectionne les enfants directs du premier élément.&nbsp;</td>
+                     <td data-label="">div <br>
+                        <span class="green">1</span> 2 <br>
+                        1 3 1 4
+                     </td>
+                  </tr>
+                  <tr>
+                     <td data-label="Nom">Sibling général</td>
+                     <td data-label="Sélecteur">div ~ 1</td>
+                     <td data-label="">Sélectionne les éléments qui sont frères et sœurs du premier élément et viennent après le premier élément.&nbsp;</td>
+                     <td data-label="">1 div <span class="green">1 1</span></td>
+                  </tr>
+                  <tr>
+                     <td data-label="Nom">Sibling adjacent</td>
+                     <td data-label="Sélecteur">div + 1</td>
+                     <td data-label="">Sélectionne les éléments qui sont frères et sœurs du premier élément et viennent directement après le premier élément.&nbsp;</td>
+                     <td data-label="">1 div <span class="green">1</span> 1</td>
+                  </tr>
+                  <tr>
+                     <td data-label="Nom">Ou</td>
+                     <td data-label="Sélecteur">div, 1</td>
+                     <td data-label="">Sélectionne les éléments qui correspondent à n'importe quel sélecteur dans la liste.&nbsp;</td>
+                     <td data-label=""><span class="green">1 div 1</span> 2</td>
+                  </tr>
+                  <tr>
+                     <td data-label="Nom">Et</td>
+                     <td data-label="Sélecteur">div.3</td>
+                     <td data-label="">Sélectionne les éléments qui correspondent à la combinaison des sélecteurs.&nbsp;</td>
+                     <td data-label="">.1 <span class="green"> div.3 </span> .3 div</td>
+                  </tr>
+               </tbody>
+            </table>
+            <table>
+               <caption>Attributs</caption>
+               <thead>
+                  <tr>
+                     <th>Nom</th>
+                     <th>Sélecteur</th>
+                     <th></th>
+                     <th></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td data-label="Nom">Possèdant</td>
+                     <td data-label="Sélecteur">[w]</td>
+                     <td data-label="">Sélectionne les éléments qui ont cet attribut.&nbsp;</td>
+                     <td data-label=""><span class="green">[w] [w=”1”]</span> [k] c</td>
+                  </tr>
+                  <tr>
+                     <td data-label="Nom">Exactement comme</td>
+                     <td data-label="Sélecteur">[w=”1”]</td>
+                     <td data-label="">Sélectionne les éléments qui ont cet attribut avec exactement cette valeur.&nbsp;</td>
+                     <td data-label="">[w] <span class="green">[w=”1”]</span> [k] c</td>
+                  </tr>
+                  <tr>
+                     <td data-label="Nom">Commence par</td>
+                     <td data-label="Sélecteur">[w^=”1”]</td>
+                     <td data-label="">Sélectionne les éléments qui ont cet attribut qui commence par cette valeur.&nbsp;</td>
+                     <td data-label=""><span class="green">[w=”12”]</span> [w=”21”]</td>
+                  </tr>
+                  <tr>
+                     <td data-label="Nom">Se termine par</td>
+                     <td data-label="Sélecteur">[w$=”1”]</td>
+                     <td data-label="">Sélectionne les éléments qui ont cet attribut qui se termine par cette valeur.&nbsp;</td>
+                     <td data-label="">[w=”12”] <span class="green">[w=”21”]</span></td>
+                  </tr>
+                  <tr>
+                     <td data-label="Nom">Sous-chaîne</td>
+                     <td data-label="Sélecteur">[w*=”3”]</td>
+                     <td data-label="">Sélectionne les éléments qui ont cet attribut et qui contient cette valeur, n'importe où.&nbsp;</td>
+                     <td data-label=""><span class="green">[w=”37”] [w=”73”]</span></td>
+                  </tr>
+               </tbody>
+            </table>
+            <table>
+               <caption>Pseudo éléments</caption>
+               <thead>
+                  <tr>
+                     <th>Nom</th>
+                     <th>Sélecteur</th>
+                     <th></th>
+                     <th></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td data-label="Nom">Avant que</td>
+                     <td data-label="Sélecteur">div::before</td>
+                     <td data-label="">Crée un élément vide directement devant les enfants de l'élément sélectionné.&nbsp;</td>
+                     <td data-label="">div <br> <span class="green">before</span> w after</td>
+                  </tr>
+                  <tr>
+                     <td data-label="Nom">Après</td>
+                     <td data-label="Sélecteur">div::after</td>
+                     <td data-label="">Crée un élément vide directement après les enfants de l'élément sélectionné.&nbsp;</td>
+                     <td data-label="">div <br> before w <span class="green">after</span></td>
+                  </tr>
+               </tbody>
+            </table>
+            <table>
+               <caption>Pseudo Classes</caption>
+               <thead>
+                  <tr>
+                     <th>Nom</th>
+                     <th>Sélecteur</th>
+                     <th></th>
+                     <th></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td data-label="Nom">Hover</td>
+                     <td data-label="Sélecteur">button:hover</td>
+                     <td data-label="">Sélectionne les éléments qui sont en hover par la souris.&nbsp;</td>
+                     <td data-label=""></td>
+                  </tr>
+                  <tr>
+                     <td data-label="Nom">Focus</td>
+                     <td data-label="Sélecteur">button:focus</td>
+                     <td data-label="">Sélectionne les éléments qui sont en focus par la souris.&nbsp;</td>
+                     <td data-label=""></td>
+                  </tr>
+                  <tr>
+                     <td data-label="Nom">Obligatoire</td>
+                     <td data-label="Sélecteur">input:required</td>
+                     <td data-label="">Sélectionne les entrées obligatoires.&nbsp;</td>
+                     <td data-label=""></td>
+                  </tr>
+                  <tr>
+                     <td data-label="Nom">Vérifié</td>
+                     <td data-label="Sélecteur">input:checked</td>
+                     <td data-label="">Sélectionne les cases à cocher/radio boutons cochés.&nbsp;</td>
+                     <td data-label=""></td>
+                  </tr>
+                  <tr>
+                     <td data-label="Nom">désactivé</td>
+                     <td data-label="Sélecteur">input:disabled</td>
+                     <td data-label="">Marque les entrées qui sont désactivées.&nbsp;</td>
+                     <td data-label=""></td>
+                  </tr>
+                  <tr>
+                     <td data-label="Nom">Premier enfant</td>
+                     <td data-label="Sélecteur">w:first-child</td>
+                     <td data-label="">Sélectionne les éléments qui sont premiers enfants à l'intérieur d'un conteneur.&nbsp;</td>
+                     <td data-label="">div - div <br> <span class="green">w</span> k - k w </td>
+                  </tr>
+                  <tr>
+                     <td data-label="Nom">Dernier enfant</td>
+                     <td data-label="Sélecteur">w:last-child</td>
+                     <td data-label="">Sélectionne les éléments qui sont derniers enfants à l'intérieur d'un conteneur.&nbsp;</td>
+                     <td data-label="">div - div <br>k w
+                        -  w <span class="green">k</span>  
+                     </td>
+                  </tr>
+                  <tr>
+                     <td data-label="Nom">Nième enfant</td>
+                     <td data-label="Sélecteur">w:nth-child(2n)</td>
+                     <td data-label="">Sélectionne les éléments qui sont nièmes enfants à l'intérieur d'un conteneur basé sur la formule demandée.&nbsp;</td>
+                     <td data-label="">div <br> w <span class="green">w</span> k <span class="green">w</span> </td>
+                  </tr>
+                  <tr>
+                     <td data-label="Nom">Nième dernier enfant</td>
+                     <td data-label="Sélecteur">w:nth-last-child(3)</td>
+                     <td data-label="">Sélectionne les éléments qui sont nièmes enfants à l'intérieur d'un conteneur basé sur la formule demandée, comptant à partir de la fin.&nbsp;</td>
+                     <td data-label="">div <br> w <span class="green"> w</span> k w </td>
+                  </tr>
+                  <tr>
+                     <td data-label="Nom">Enfant unique</td>
+                     <td data-label="Sélecteur">w:only-child</td>
+                     <td data-label="">Sélectionne les éléments qui sont enfants uniques à l'intérieur d'un conteneur.&nbsp;</td>
+                     <td data-label="">div - div <br> w k 
+                        <span class="green"> w</span> 
+                     </td>
+                  </tr>
+                  <tr>
+                     <td data-label="Nom">Premier de ce type</td>
+                     <td data-label="Sélecteur">w:first-of-type</td>
+                     <td data-label="">Sélectionne les éléments qui sont premiers de leur type à l'intérieur d'un conteneur.&nbsp;</td>
+                     <td data-label="">div <br> k <span class="green">w</span> w k</td>
+                  </tr>
+                  <tr>
+                     <td data-label="Nom"></td>
+                     <td data-label="Sélecteur">
+                        Dernier de ce type
+                     </td>
+                     <td data-label="">Sélectionne les éléments qui sont derniers de leur type à l'intérieur d'un conteneur.&nbsp;</td>
+                     <td data-label="">div <br> k w <span class="green">w</span> k</td>
+                  </tr>
+                  <tr>
+                     <td data-label="Nom">Nième de ce type</td>
+                     <td data-label="Sélecteur">w:nth-of-type(2n)</td>
+                     <td data-label="">Sélectionne les éléments qui sont nièmes de leur type à l'intérieur d'un conteneur, basé sur la formule demandée.&nbsp;</td>
+                     <td data-label="">div <br> k w <span class="green">w</span> k</td>
+                  </tr>
+                  <tr>
+                     <td data-label="Nom">Nième dernier de ce type</td>
+                     <td data-label="Sélecteur">w:nth-last-of-type(2)</td>
+                     <td data-label="">Sélectionne les éléments qui sont nièmes de leur type à l'intérieur d'un conteneur, basé sur la formule et comptant à partir de la fin.&nbsp;</td>
+                     <td data-label="">div <br> k <span class="green">w</span> w k</td>
+                  </tr>
+                  <tr>
+                     <td data-label="Nom">Seul de ce type</td>
+                     <td data-label="Sélecteur">w:only-of-type</td>
+                     <td data-label="">Sélectionne les éléments qui sont les seuls de leur type à l'intérieur d'un conteneur.&nbsp;</td>
+                     <td data-label="">div <br> k k <span class="green">w</span> k</td>
+                  </tr>
+                  <tr>
+                     <td data-label="Nom">Not</td>
+                     <td data-label="Sélecteur">w:not(.c)</td>
+                     <td data-label="">Cible les éléments qui ne sont pas représentés par cet argument.&nbsp;Ici contient tous les w sauf ceux avec la classe c.&nbsp;</td>
+                     <td data-label="">k w.c <span class="green">w w.z</span></td>
+                  </tr>
+               </tbody>
+            </table>
+            <div class="credits">
+               <div class="credits__item">
+                  <div class="credits__item--card">
+                     <img  class="credits__item--pic" src="https://images.pexels.com/photos/207582/pexels-photo-207582.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="photo de NOM">
+                     <div class="credits__item--name">Nom</div>
+                  </div>
+                  <ul class="credits__item--pictos">
+                     <li class="credits__item--picto">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                           <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                     <li class="credits__item--picto">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                           <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+                        </svg>
+                     </li>
+                     <li class="credits__item--picto">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                           aria-label="CodePen" role="img"
+                           viewBox="0 0 512 512">
+                           <rect
+                              width="512" height="512"
+                              rx="15%"
+                              fill="#111"/>
+                           <g
+                              fill="none"
+                              stroke="#e6e6e6"
+                              stroke-width="33"
+                              stroke-linejoin="round">
+                              <path d="M81 198v116l175 117 175-117V198L256 81z"/>
+                              <path d="M81 198l175 116 175-116M256 81v117"/>
+                              <path d="M81 314l175-116 175 116M256 431V314"/>
+                           </g>
+                        </svg>
+                     </li>
+                  </ul>
+               </div>
+               <div class="mobile">
+                  <div class="none">
+                     <img  class="credits__item--pic" src="https://images.pexels.com/photos/207582/pexels-photo-207582.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="photo de NOM">
+                     <div class="credits__item--name">Nom</div>
+                  </div>
+                  <div class="credits__item--descr">Web Dev Simplified is all about teaching web development skills and techniques in an efficient and practical manner.&nbsp;If you are just getting started in web development Web Dev Simplified has all the tools you need to learn the newest and most popular technologies to convert you from a no stack to full stack developer.&nbsp;</div>
+               </div>
+            </div>
+         </div>
+         <div class="next">
+            <small><a  href="" class="onglet__btn buttoncolors">next</a></small>
+            <small><a  href="" class="onglet__btn buttoncolors">previous</a></small>
+         </div>
+      </main>
+      <footer >
+         <div class="foot">
+            <h3 class=" uppercase">Say hi&thinsp;👋</h3>
+            <a class="link__white"  href="mailto:hello@knowledgecenter.dev">hello@knowledgecenter.dev</a>
+            <ul class="social">
+               <li class="uppercase"><a  class="link__white"  href="https://www.instagram.com/?hl=fr" target="_blank">instagram&thinsp;↗</a></li>
+               <li class="uppercase"><a class="link__white"  href="https://twitter.com/?lang=fr" target="_blank">Github&thinsp;↗</a></li>
+               <li class="uppercase"><a class="link__white"  href="https://twitter.com/?lang=fr" target="_blank">Codepen&thinsp;↗</a></li>
+            </ul>
+         </div>
+         <div class="foot__deux">
+            <small> ©&thinsp;<span class="date">date en js </span>, powered by <a href="http://dwm.re/" target="_blank" class="link__white">DWT&thinsp;☠️</a> and developed by <a href="http://samourse.com/" target="_blank" class="link__white">Sam&thinsp;🐻</a>.&nbsp;</small>
+            <button class="bas__btn" id="Bas"><span class="bas__btn">vers le haut de page</span></button>
+         </div>
+      </footer>
+      <script src="scripts/main.js" defer></script>
+   </body>
+</html>
